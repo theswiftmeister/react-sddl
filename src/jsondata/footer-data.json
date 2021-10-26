@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Services",
+    "url": "/services",
+    "subItems": [
+      {
+        "name": "Search/Rent/Buy an Apartment",
+        "hash": "#"
+      },
+      {
+        "name": "Appointment for Consultancy",
+        "hash": "#"
+      }
+    ]
+  },
+  {
+    "title": "Projects",
+    "url": "/Projects",
+    "subItems": [
+      {
+        "name": "On-going Projects",
+        "hash": ""
+      },
+      {
+        "name": "All Projects",
+        "hash": "/Projects"
+      }
+    ]
+  },
+  {
+    "title": "Legal",
+    "subItems": [
+      {
+        "name": "Terms and Conditions",
+        "hash": "#tac"
+      }
+    ]
+  }
+]

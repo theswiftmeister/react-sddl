@@ -1,0 +1,19 @@
+.error-content {
+  height: 100vh;
+  margin: 25vh auto;
+  font-size: 2rem;
+}
+.error-content > h2 {
+  margin: 0px auto 12px;
+  color: var(--secondary-font-color);
+}
+.error-content > p {
+  font-size: 1.85rem;
+  color: var(--primary-font-color);
+}
+
+.error-content > a {
+  margin: 16px auto;
+  font-size: 1.2rem;
+  color: var(--secondary-font-color);
+}

@@ -1,0 +1,317 @@
+[
+  {
+    "images": ["images/villa-blanc/card-image-1.jpg"],
+    "name": "Villa Blanc",
+    "propertyType": "Residencial Building",
+    "storied": "13 stories w/ two basements",
+    "address": "House no. 543/N, Rd. 6/A",
+    "localArea": "Dhanmondi R/A, Dhaka.",
+    "status": "Under-development",
+    "downloads": [],
+    "size": ""
+  },
+  {
+    "images": [
+      "images/baitul-khalek/v-03.jpg",
+      "images/baitul-khalek/v-01.jpg",
+      "images/baitul-khalek/v-02.jpg",
+      "images/baitul-khalek/v-04.jpg",
+      "images/baitul-khalek/v-05.jpg"
+    ],
+    "name": "Baitul Khalek",
+    "propertyType": "Residencial Building",
+    "storied": "10",
+    "address": "House no. 67, West Tajturi Bazar",
+    "localArea": "Tejgoan, Dhaka.",
+    "status": "Under-development",
+    "downloads": [
+      "download-plans/Baitul Khalek/parking.pdf",
+      "download-plans/Baitul Khalek/floor.pdf",
+      "download-plans/Baitul Khalek/roof.pdf"
+    ],
+    "size": ""
+  },
+  {
+    "images": ["images/al amin/view_01.png"],
+    "name": "Al-Amin",
+    "propertyType": "Residencial Building",
+    "storied": "9",
+    "address": "Plot no. 173/2 Alatun Nessa Rd.",
+    "localArea": "Badda, Dhaka.",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Al Amin/parking.pdf",
+      "download-plans/Al Amin/floor.pdf",
+      "download-plans/Al Amin/roof.pdf"
+    ],
+    "size": "1352"
+  },
+  {
+    "images": [],
+    "name": "Aumio Regency",
+    "propertyType": "Residencial Building",
+    "storied": "8",
+    "address": "Plot no. 11, Road no. 11, Sector no. 10, Uttara Modeltown",
+    "localArea": "Uttara, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Aumio Regency/parking.pdf",
+      "download-plans/Aumio Regency/floor.pdf",
+      "download-plans/Aumio Regency/roof.pdf"
+    ],
+    "size": "1194"
+  },
+  {
+    "images": [
+      "images/Asia Tower/1.jpg",
+      "images/Asia Tower/3.jpg",
+      "images/Asia Tower/5.jpg"
+    ],
+    "name": "Asia Tower",
+    "propertyType": "Residencial Building",
+    "storied": "10 stories w/ one basement",
+    "address": "249/B South Jatrabari",
+    "localArea": "Jatrabari, Dhaka.",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Asia Tower/basement.pdf",
+      "download-plans/Asia Tower/parking.pdf",
+      "download-plans/Asia Tower/floor.pdf",
+      "download-plans/Asia Tower/roof.pdf"
+    ],
+    "size": "1231, 1322, 1256, 1231"
+  },
+  {
+    "images": [
+      "images/Behanga/01.jpg",
+      "images/Behanga/02.jpg",
+      "images/Behanga/03.jpg"
+    ],
+    "name": "Bihanga",
+    "propertyType": "Residencial Building",
+    "storied": "9",
+    "address": "81,82 Hatem Bagh Rd.",
+    "localArea": "Rayer Bazar Dhaka.",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Bihanga/parking.pdf",
+      "download-plans/Bihanga/floor.pdf",
+      "download-plans/Bihanga/roof.pdf"
+    ],
+    "size": ""
+  },
+  {
+    "images": [
+      "images/Feroza Garden/view_01.jpg",
+      "images/Feroza Garden/view_02.jpg"
+    ],
+    "name": "Feroza Garden",
+    "propertyType": "Residencial Building",
+    "storied": "9",
+    "address": "173, Middle Paik Para",
+    "localArea": "Paikpara, Dhaka.",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Feroza Garden/parking.pdf",
+      "download-plans/Feroza Garden/floor.pdf",
+      "download-plans/Feroza Garden/roof.pdf"
+    ],
+    "size": "896, 932, 860"
+  },
+  {
+    "images": [
+      "images/Hamida tower/1.jpg",
+      "images/Hamida tower/2.jpg",
+      "images/Hamida tower/3.jpg"
+    ],
+    "name": "Hamida Tower",
+    "propertyType": "Residencial Building",
+    "storied": "10 stories w/ one basement.",
+    "address": "249/1 South Jatrabari",
+    "localArea": "Jatrabari, Dhaka.",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Hamida Tower/basement.pdf",
+      "download-plans/Hamida Tower/parking.pdf",
+      "download-plans/Hamida Tower/floor.pdf",
+      "download-plans/Hamida Tower/roof.pdf"
+    ],
+    "size": ""
+  },
+  {
+    "images": ["images/Khair Palace/01.jpg", "images/Khair Palace/03.jpg"],
+    "name": "Khair Palace",
+    "propertyType": "Residencial Building",
+    "storied": "9",
+    "address": "Plot no. 814, Shah Ali Bagh",
+    "localArea": "Senpara Parbata, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Khair Palace/parking.pdf",
+      "download-plans/Khair Palace/floor.pdf",
+      "download-plans/Khair Palace/roof.pdf"
+    ],
+    "size": "1085, 1185"
+  },
+  {
+    "images": [
+      "images/Maeha Mahal/v_01.jpg",
+      "images/Maeha Mahal/v_02.jpg",
+      "images/Maeha Mahal/v_03.jpg"
+    ],
+    "name": "Maleha Mahal",
+    "propertyType": "Residencial Building",
+    "storied": "7",
+    "address": "Holding-9/8, Pallabi",
+    "localArea": "Mirpur, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Maleha Mahal/parking.pdf",
+      "download-plans/Maleha Mahal/floor.pdf",
+      "download-plans/Maleha Mahal/roof.pdf"
+    ],
+    "size": "1585"
+  },
+  {
+    "images": [],
+    "name": "Mahmud Villa",
+    "propertyType": "Residencial Building",
+    "storied": "7",
+    "address": "Block no. 7, Plot no. 18, Pallabi",
+    "localArea": "Mirpur, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Mahmuda Villa/parking.pdf",
+      "download-plans/Mahmuda Villa/floor.pdf",
+      "download-plans/Mahmuda Villa/roof.pdf"
+    ],
+    "size": "1505"
+  },
+  {
+    "images": ["images/Mirza Regency/01.jpg", "images/Mirza Regency/02.jpg"],
+    "name": "Mirza Regency",
+    "address": "6",
+    "storied": "Road-3,House-326,Baitul Aman housing",
+    "localArea": "Dhaka",
+    "status": "Completed",
+    "downloads": [],
+    "size": ""
+  },
+  {
+    "images": [
+      "images/Parents dream/1.jpg",
+      "images/Parents dream/2.jpg",
+      "images/Parents dream/3.jpg"
+    ],
+    "name": "Parent's Dream",
+    "propertyType": "Residencial Building",
+    "storied": "10 stories w/ one basement",
+    "address": "Sarai Zafrabad",
+    "localArea": "Sarai Zafrabad, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Parents Dream/parking.pdf",
+      "download-plans/Parents Dream/floor.pdf",
+      "download-plans/Parents Dream/roof.pdf"
+    ],
+    "size": ""
+  },
+  {
+    "images": ["images/probash/1.jpg", "images/probash/2.jpg"],
+    "name": "Probash",
+    "propertyType": "Residencial Building",
+    "storied": "9",
+    "address": "Plot-297, East Goran",
+    "localArea": "East Goran, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Probash/parking.pdf",
+      "download-plans/Probash/floor.pdf",
+      "download-plans/Probash/roof.pdf"
+    ],
+    "size": "1175, 1195"
+  },
+  {
+    "images": ["images/ROSE GARDEN/1.jpg", "images/ROSE GARDEN/3.jpg"],
+    "name": "Rose Garden",
+    "propertyType": "Residencial Building",
+    "address": "192, Tejkunipara",
+    "storied": "8",
+    "localArea": "Tejgaon,Dhaka",
+    "status": "Completed",
+    "downloads": [],
+    "size": "1305, 1183"
+  },
+  {
+    "images": ["images/Sanchita/1.jpg", "images/Sanchita/2.jpg"],
+    "name": "SDD Sanchita",
+    "propertyType": "Residencial Building",
+    "storied": "10",
+    "address": "Holding-68, Afsaruddin Road",
+    "localArea": "West Dhanmondi R/A, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Sanchita/basement.pdf",
+      "download-plans/Sanchita/parking.pdf",
+      "download-plans/Sanchita/floor.pdf",
+      "download-plans/Sanchita/roof.pdf"
+    ],
+    "size": "1451, 1546"
+  },
+  {
+    "images": [
+      "images/Sayeeda Lodge/1.jpg",
+      "images/Sayeeda Lodge/2.jpg",
+      "images/Sayeeda Lodge/3.jpg"
+    ],
+    "name": "Sayeeda Lodge",
+    "propertyType": "Residencial Building",
+    "storied": "9",
+    "address": "163, Free School Street",
+    "localArea": "Kathal Bagan,Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Sayeeda Lodge/basement.pdf",
+      "download-plans/Sayeeda Lodge/parking.pdf",
+      "download-plans/Sayeeda Lodge/floor.pdf",
+      "download-plans/Sayeeda Lodge/roof.pdf"
+    ],
+    "size": "1600"
+  },
+  {
+    "images": [
+      "images/sharolipi and shiralipi/1.jpg",
+      "images/sharolipi and shiralipi/2.jpg",
+      "images/sharolipi and shiralipi/3.jpg",
+      "images/sharolipi and shiralipi/4.jpg"
+    ],
+    "name": "Sharolipi and Shiralipi",
+    "propertyType": "Residencial Building",
+    "storied": "10",
+    "address": "10/3,10/4 Tollabag,",
+    "localArea": "Sobhanbag, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Sharolipi and Shiralipi/basement.pdf",
+      "download-plans/Sharolipi and Shiralipi/parking.pdf",
+      "download-plans/Sharolipi and Shiralipi/floor.pdf",
+      "download-plans/Sharolipi and Shiralipi/roof.pdf"
+    ],
+    "size": "1533"
+  },
+  {
+    "images": ["images/soangoan/1.jpg", "images/soangoan/2.jpg"],
+    "name": "Sonargoan",
+    "propertyType": "Residencial Building",
+    "storied": "9",
+    "address": "29/30, Al Amin Road,",
+    "localArea": "Kathal Bagan, Dhaka",
+    "status": "Completed",
+    "downloads": [
+      "download-plans/Soangoan/parking.pdf",
+      "download-plans/Soangoan/floor.pdf",
+      "download-plans/Soangoan/roof.pdf"
+    ],
+    "size": ""
+  }
+]

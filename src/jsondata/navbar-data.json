@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "heading": "Home",
+    "url": "home",
+    "dropdowns": [
+      {
+        "heading": "About Us",
+        "url": "home",
+        "elementId": "#about-us"
+      },
+      {
+        "heading": "Featured projects",
+        "url": "home",
+        "elementId": "#featured_projects"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "heading": "Our Work",
+    "url": "Projects"
+  },
+  {
+    "id": 3,
+    "heading": "Terms",
+    "url": "Our_Terms_And_Conditions"
+  },
+  {
+    "id": 4,
+    "heading": "Contact",
+    "url": "Contact_Us"
+  }
+]

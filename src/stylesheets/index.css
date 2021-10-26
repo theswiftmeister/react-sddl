@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+:root {
+  --primary-background-color: #ededed;
+  --secondary-background-color: #171717;
+  --primary-font-color: #ed1b24;
+  --secondary-font-color: #444444;
+
+  --navbar-font-family: "Merriweather Sans", sans-serif;
+  --carousel-title-text-font: "Tangerine", cursive;
+  --navbar-font-size: 1.3rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  width: 100vw;
+  max-width: 100%;
+  text-align: center;
+  font-family: var(--navbar-font-family);
+}
+#top-section {
+  height: 100vh;
+}
+#mid-section {
+  background-color: var(--primary-background-color);
+}
+.container {
+  margin: 0px auto;
+  width: 85vw;
+}
+.about-us {
+  scroll-margin: 85px;
+  margin: 0px auto;
+  padding-top: 12px;
+  width: 69vw;
+  height: auto;
+}
+.first-row,
+.second-row,
+.third-row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.about-us-img {
+  height: 100%;
+  width: 50%;
+}
+.about-us-img > img {
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.9);
+}
+.about-us-text {
+  line-height: 1.5;
+  height: 100%;
+  width: 50%;
+  margin: auto;
+}
+
+.about-us-text > h3 {
+  margin: 16px 0px 10px;
+  font-size: calc(var(--navbar-font-size) * 1.15);
+  color: var(--primary-font-color);
+}
+.about-us-text > p {
+  margin: 16px 32px;
+  font-size: calc(var(--navbar-font-size) * 0.75);
+}
+.heading-image1 {
+  margin: 12px auto 0px;
+  width: 50px;
+  background-color: transparent;
+}
+
+.section-headings {
+  font-size: calc(var(--navbar-font-size) * 1.4);
+  margin: 16px auto 0px;
+  padding: 0px 0px 12px;
+  color: var(--primary-font-color);
+}
+
+.underline {
+  margin: 16px 5px;
+  padding: 0px 50px;
+  border-top: 3px solid var(--secondary-background-color);
+}
+#featured_projects {
+  scroll-margin: 85px;
+  background-color: var(--secondary-font-color);
+  padding: 12px 0px 32px;
+  height: 75vh;
+}
+#featured_projects > .section-headings {
+  color: var(--primary-background-color);
+}
+.featured-cards-container {
+  margin: 16px auto;
+  display: flex;
+  justify-content: center;
+}
+.cards {
+  margin: 0px 2px;
+  height: 500px;
+}
+
+.cards .image {
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-details > h2 {
+  padding: 8px 0px;
+}
+.cards > .image > .card-details {
+  position: absolute;
+  white-space: nowrap;
+  opacity: 0;
+  color: var(--primary-background-color);
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+.cards .image:hover .card-details {
+  opacity: 1;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+.card-image:hover {
+  transform: scale(1);
+  filter: blur(2px);
+  opacity: 0.3;
+}

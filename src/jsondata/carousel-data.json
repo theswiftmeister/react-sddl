@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "title": "",
+    "info": [],
+    "image": "images/carousel-images/sddl-img.png"
+  },
+  {
+    "id": 1,
+    "title": "Asia Tower",
+    "info": ["9-storied", "Residential building in Jatrabari, Dhaka."],
+    "image": "images/carousel-images/asia.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Parent's Dream",
+    "info": [
+      "10-storied w/ basement",
+      "Residential building in Sarai Zafrabad"
+    ],
+    "image": "images/carousel-images/parentsdream.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Maleha Mahal",
+    "info": ["9-storied", "Residential building in Mirpur, Dhaka"],
+    "image": "images/carousel-images/maehamahal.jpg"
+  }
+]

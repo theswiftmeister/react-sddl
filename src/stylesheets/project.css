@@ -1,0 +1,115 @@
+.project-container {
+  height: 90vh;
+}
+.bread-crumb {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 1.15rem;
+}
+
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: var(--primary-font-color);
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: var(--secondary-font-color);
+}
+.project-content {
+  width: 60%;
+  height: 65vh;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 0.01fr 0.66fr;
+}
+.middle-section {
+  position: relative;
+  padding-right: 16px;
+}
+.center-border {
+  transform: translateY(60%);
+  height: 35%;
+  border-right: 1px solid grey;
+}
+
+.project-info {
+  font-size: 1.2rem;
+  width: 75%;
+  margin: 16px 0px 16px auto;
+}
+.project-info > div {
+  display: grid;
+  grid-template-columns: 0.66fr 1fr;
+  padding: 12px 0px;
+  margin: 0px 0px 16px 0px;
+  text-align: right;
+}
+.project-info > div > h4 {
+  text-align: left;
+}
+
+.project-images {
+  margin: 32px auto;
+  height: 100px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+.project-images > div {
+  margin: 0px 3px;
+  width: 75px;
+}
+.project-images > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.project-images > div > img:hover {
+  opacity: 0.5;
+}
+.project-content > .image-div {
+  opacity: 0;
+  width: 100%;
+  height: 65vh;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.download-project-plan {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  margin: 16px auto;
+}
+.download-project-plan > a,
+.download-project-plan > p {
+  padding-left: 3px;
+  margin-left: 3px;
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+.download-project-plan > a:hover {
+  font-weight: bolder;
+  color: var(--secondary-font-color);
+}

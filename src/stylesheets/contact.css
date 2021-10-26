@@ -1,0 +1,105 @@
+section#contact {
+  margin: 0px auto;
+  height: 100vh;
+}
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.book-appointment {
+  margin: 0px auto;
+  width: 80vw;
+}
+.book-appointment > p {
+  font-size: calc(var(--navbar-font-size) * 0.9);
+}
+
+.contact-form {
+  margin: 16px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-form > form {
+  padding: 16px;
+  width: 80%;
+}
+.contact-form > form > .row {
+  text-align: left;
+  margin: 4px auto;
+  padding: 8px 0px;
+}
+
+.contact-form > form > .row > label {
+  display: block;
+  font-size: calc(var(--navbar-font-size) * 0.85);
+  color: var(--primary-font-color);
+}
+.contact-form > form > .row > input {
+  width: 100%;
+  font-size: calc(var(--navbar-font-size) * 0.75);
+  padding: 8px;
+  border: 2px solid var(--secondary-font-color);
+}
+.contact-form > form > .row > textarea {
+  font-size: calc(var(--navbar-font-size) * 0.7);
+  resize: none;
+  line-height: 1.5;
+  padding: 0px 8px;
+  border: 2px solid var(--secondary-font-color);
+  width: 100%;
+}
+.submit-btn {
+  border: 2px solid var(--secondary-font-color);
+  border-radius: 5px;
+  color: var(--primary-font-color);
+  padding: 4px 24px;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 50%;
+  margin: 16px auto auto;
+  padding: 16px;
+}
+.right > div > div {
+  display: flex;
+}
+.right > div {
+  margin-bottom: 8px;
+}
+.right > div > p {
+  margin-left: 26px;
+  padding-top: 8px;
+  font-size: 1.15rem;
+  text-align: left;
+}
+.right > div > div > p {
+  color: var(--primary-font-color);
+  padding-left: 8px;
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.right > div > div > img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.right > div > div > img.location {
+  width: 20px;
+  height: 25px;
+}
+/* Chrome, Safari, Opera support */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
