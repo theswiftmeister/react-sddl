@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useRef } from "react/cjs/react.development";
 import projects_data from "../jsondata/projects_data.json";
 import "../stylesheets/projects.css";
 
@@ -7,14 +8,54 @@ const maxItemsPerPage = 5;
 
 const Projects = () => {
   const location = useLocation();
-
   const public_url = process.env.PUBLIC_URL;
+  const [projectList, setProjectList] = useState(projects_data);
+  const inputNameRef = useRef(null);
+  const inputAreaRef = useRef(null);
+  const inputStatusRef = useRef(null);
+
   const [page, setPage] = useState(
     location.state === undefined ? 1 : location.state["page"]
   );
   const changePage = useCallback((e) => {
     setPage(e);
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let project_arr = projects_data;
+
+    if (
+      !inputNameRef.current.value &&
+      !inputAreaRef.current.value &&
+      inputStatusRef.current.value === "any"
+    ) {
+      setProjectList(projects_data);
+    } else {
+      setProjectList(
+        project_arr.filter(
+          (item) =>
+            (inputStatusRef.current.value === "any"
+              ? true
+              : item.status.toLowerCase() ===
+                inputStatusRef.current.value.toLowerCase()) &&
+            item.name
+              .toLowerCase()
+              .includes(inputNameRef.current.value.toLowerCase()) &&
+            item.localArea
+              .toLowerCase()
+              .includes(inputAreaRef.current.value.toLowerCase())
+        )
+      );
+    }
+    clearInputRefs();
+  };
+
+  const clearInputRefs = () => {
+    inputNameRef.current.value = "";
+    inputAreaRef.current.value = "";
+    inputStatusRef.current.value = "any";
+  };
 
   return (
     <>
@@ -29,6 +70,48 @@ const Projects = () => {
             />
             <p className="top-name">Projects</p>
           </div>
+          <div className="search-div">
+            <form
+              action=""
+              onSubmit={(e) => {
+                handleSubmit(e);
+              }}
+            >
+              <label htmlFor="search-input-name">Search by name: </label>
+              <input
+                type="text"
+                name="search-input-name"
+                id="search-input-name"
+                ref={inputNameRef}
+              />
+              <label htmlFor="search-input-area">Search by area: </label>
+              <input
+                type="text"
+                name="search-input-area"
+                id="search-input-area"
+                ref={inputAreaRef}
+              />
+              <label htmlFor="search-input-status">Select status: </label>
+              <select
+                name="select-status"
+                id="select-status"
+                ref={inputStatusRef}
+                style={{
+                  fontSize: "1.15rem",
+                  padding: "2px",
+                  border: "2px solid black",
+                }}
+              >
+                <option value="any">All</option>
+                <option value="completed">Completed</option>
+                <option value="in development">In Development</option>
+              </select>
+
+              <button className="form-submit" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
           <div className="projects-list-container">
             <div className="list-header">
               <h4> </h4>
@@ -37,9 +120,17 @@ const Projects = () => {
               <h4>Status</h4>
             </div>
             <ul className="project-list">
-              <ListItem public_url={public_url} page={page} />
+              <ListItem
+                project_list={projectList}
+                public_url={public_url}
+                page={page}
+              />
             </ul>
-            <Pagination page={page} setPage={(e) => changePage(e)} />
+            <Pagination
+              project_list={projectList}
+              page={page}
+              setPage={(e) => changePage(e)}
+            />
           </div>
         </div>
       </div>
@@ -47,12 +138,13 @@ const Projects = () => {
   );
 };
 
-const ListItem = ({ public_url, page }) => {
-  return projects_data
+const ListItem = ({ project_list, public_url, page }) => {
+  console.log("df");
+  return project_list
     .slice(
       page * maxItemsPerPage - maxItemsPerPage,
-      page * maxItemsPerPage >= projects_data.length
-        ? projects_data.length
+      page * maxItemsPerPage >= project_list.length
+        ? project_list.length
         : page * maxItemsPerPage
     )
     .map((item, index) => {
@@ -87,7 +179,12 @@ const ListItem = ({ public_url, page }) => {
     });
 };
 
-const Pagination = ({ page, setPage }) => {
+const Pagination = ({ project_list, page, setPage }) => {
+  const arr_size = parseInt(
+    project_list.length % maxItemsPerPage === 0
+      ? project_list.length / maxItemsPerPage
+      : project_list.length / maxItemsPerPage + 1
+  );
   return (
     <>
       <div className="pagination">
@@ -99,7 +196,7 @@ const Pagination = ({ page, setPage }) => {
         >
           &#8592;
         </button>
-        {Array(parseInt(projects_data.length / maxItemsPerPage) + 1)
+        {Array(arr_size)
           .fill(0)
           .map((_, idx) => (
             <button
@@ -114,14 +211,8 @@ const Pagination = ({ page, setPage }) => {
         <button
           className="not-active-btn"
           type="button"
-          disabled={
-            page === parseInt(projects_data.length / maxItemsPerPage) + 1
-              ? true
-              : false
-          }
-          onClick={() =>
-            setPage(parseInt(projects_data.length / maxItemsPerPage) + 1)
-          }
+          disabled={page === arr_size ? true : false}
+          onClick={() => setPage(arr_size)}
         >
           &#x2192;
         </button>

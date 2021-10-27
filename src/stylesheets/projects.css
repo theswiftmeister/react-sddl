@@ -1,6 +1,41 @@
 .projects-container {
   margin: 0px auto 0px;
 }
+.search-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 75vw;
+  margin: 12px auto;
+}
+.search-div > form {
+  padding: 8px;
+  color: var(--secondary-background-color);
+  background-color: var(--primary-background-color);
+  border-radius: 6px;
+}
+.search-div > form > label {
+  margin: auto 2px auto 16px;
+  font-size: 1.15rem;
+}
+.search-div > form > input {
+  line-height: 1.65rem;
+  border-radius: 0px;
+  font-family: var(--navbar-font-family);
+  font-size: 1.15rem;
+}
+.search-div > select {
+  border-radius: 0px;
+  font-family: var(--navbar-font-family);
+}
+
+.form-submit {
+  margin: auto 8px auto 16px;
+  padding: 2px 16px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+}
+
 .projects-list-container {
   margin: 24px auto;
 }
