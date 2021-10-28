@@ -1,6 +1,8 @@
 footer {
   background-color: var(--primary-background-color);
   text-align: left;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
 }
 
 .footer-top {
@@ -17,9 +19,9 @@ footer {
 }
 
 .footer-link {
+  font-family: var(--secondary-font-family);
   text-decoration: none;
   font-size: calc(var(--navbar-font-size) * 0.85);
-  font-weight: 400;
   color: var(--secondary-font-color);
   margin: 4px 25%;
 }

@@ -120,11 +120,26 @@ const Projects = () => {
               <h4>Status</h4>
             </div>
             <ul className="project-list">
-              <ListItem
-                project_list={projectList}
-                public_url={public_url}
-                page={page}
-              />
+              {projectList.length > 0 ? (
+                <ListItem
+                  project_list={projectList}
+                  public_url={public_url}
+                  page={page}
+                />
+              ) : (
+                <li className="project-list-item">
+                  <p
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      fontSize: "1.5rem",
+                      padding: "12px",
+                    }}
+                  >
+                    No matching items found.
+                  </p>
+                </li>
+              )}
             </ul>
             <Pagination
               project_list={projectList}
@@ -211,7 +226,9 @@ const Pagination = ({ project_list, page, setPage }) => {
         <button
           className="not-active-btn"
           type="button"
-          disabled={page === arr_size ? true : false}
+          disabled={
+            (page === arr_size) | (project_list.length === 0) ? true : false
+          }
           onClick={() => setPage(arr_size)}
         >
           &#x2192;

@@ -1,6 +1,7 @@
 #termsAndConditions {
   margin: 85px auto 0px;
   width: 100vw;
+  font-family: var(--primary-font-family);
 }
 h1 {
   margin: 16px auto 8px;
@@ -10,19 +11,24 @@ h1 {
   list-style-type: none;
   overflow: hidden;
   margin: auto;
-  width: 50vw;
 }
 .terms-list-item {
-  margin: 16px auto;
+  margin: auto 0px;
 }
 .terms-list-item > p.numbers {
-  padding-left: 16px;
+  padding: 8px 16px 0px;
   font-weight: bold;
   color: var(--navbar-font-color);
+  font-family: var(--secondary-font-family);
 }
 .terms-list-item > p.term-text {
   font-weight: 400;
   font-size: 1.1rem;
   padding: 0px 16px 16px;
   line-height: 1.5;
+  font-family: var(--secondary-font-family);
+}
+
+.coloured {
+  background-color: var(--primary-background-color);
 }

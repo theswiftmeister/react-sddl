@@ -55,8 +55,8 @@
   margin: 2rem auto;
   padding-right: 3rem;
   transition: all 3s;
-  font-family: var(--carousel-title-text-font);
-  font-size: 6rem;
+  font-family: var(--secondary-font-family);
+  font-size: 3.5rem;
   color: var(--primary-background-color);
 }
 .item-title-text-ttb {
@@ -72,6 +72,7 @@
   line-height: 1.5;
   transition: all 3s;
   color: var(--primary-background-color);
+  font-family: var(--primary-font-family);
 }
 .info-text {
   line-height: 3rem;

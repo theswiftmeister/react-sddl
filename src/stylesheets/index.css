@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@500&display=swap");
 :root {
   --primary-background-color: #ededed;
   --secondary-background-color: #171717;
   --primary-font-color: #ed1b24;
   --secondary-font-color: #444444;
 
-  --navbar-font-family: "Merriweather Sans", sans-serif;
-  --carousel-title-text-font: "Tangerine", cursive;
+  --primary-font-family: "Lato", sans-serif;
+  --secondary-font-family: "Roboto Slab", serif;
   --navbar-font-size: 1.3rem;
 }
 * {
@@ -22,7 +21,6 @@ body {
   width: 100vw;
   max-width: 100%;
   text-align: center;
-  font-family: var(--navbar-font-family);
 }
 #top-section {
   height: 100vh;
@@ -70,10 +68,13 @@ body {
   margin: 16px 0px 10px;
   font-size: calc(var(--navbar-font-size) * 1.15);
   color: var(--primary-font-color);
+  font-family: var(--secondary-font-family);
 }
 .about-us-text > p {
   margin: 16px 32px;
   font-size: calc(var(--navbar-font-size) * 0.75);
+  font-family: var(--primary-font-family);
+  font-weight: 700;
 }
 .heading-image1 {
   margin: 12px auto 0px;
@@ -86,6 +87,7 @@ body {
   margin: 16px auto 0px;
   padding: 0px 0px 12px;
   color: var(--primary-font-color);
+  font-family: var(--primary-font-family);
 }
 
 .underline {
@@ -100,7 +102,7 @@ body {
   height: 75vh;
 }
 #featured_projects > .section-headings {
-  color: var(--primary-background-color);
+  color: var(--primary-font-color);
 }
 .featured-cards-container {
   margin: 16px auto;
@@ -128,6 +130,7 @@ body {
   white-space: nowrap;
   opacity: 0;
   color: var(--primary-background-color);
+  font-family: var(--primary-font-family);
   top: 50%;
   transform: translateY(-50%);
   transform: translateX(-50%);

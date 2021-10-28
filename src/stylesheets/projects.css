@@ -1,5 +1,6 @@
 .projects-container {
   margin: 0px auto 0px;
+  font-family: var(--secondary-font-family);
 }
 .search-div {
   display: flex;
@@ -82,10 +83,13 @@
   text-decoration: none;
   text-align: left;
 }
+.item-address {
+  font-size: 1.15rem;
+}
 
 .item-status {
   color: var(--primary-font-color);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 .pagination {

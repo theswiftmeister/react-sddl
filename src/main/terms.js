@@ -52,9 +52,18 @@ const TermItems = ({ termsData, numbers }) => {
   return termsData.map((item, index) => {
     const { term } = item;
     return (
-      <li key={index} className="terms-list-item">
-        <p className="numbers">{numbers[index]}</p>
-        <p dangerouslySetInnerHTML={{ __html: term }} className="term-text"></p>
+      <li
+        key={index}
+        className={`terms-list-item ${index % 2 === 0 && "coloured"}`}
+      >
+        <p className="numbers" style={{ width: "50vw", margin: "auto" }}>
+          {numbers[index]}
+        </p>
+        <p
+          dangerouslySetInnerHTML={{ __html: term }}
+          className="term-text"
+          style={{ width: "50vw", margin: "auto" }}
+        ></p>
       </li>
     );
   });

@@ -14,8 +14,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-family: var(--navbar-font-family);
+  font-family: var(--primary-font-family);
   font-size: calc(var(--navbar-font-size));
+  font-weight: 700;
 }
 .navbar-left {
   height: 79px;
@@ -41,6 +42,8 @@ header {
   font-size: calc(var(--navbar-font-size) * 1.2);
   padding-bottom: 0px;
   border-bottom: 3px solid #181717;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
 }
 .not-current-page:hover {
   font-size: calc(var(--navbar-font-size) * 1.2);
@@ -65,6 +68,10 @@ header {
   font-size: calc(var(--navbar-font-size));
   padding: 0.5em 1em;
   transition: all 0.3s;
+}
+.dropdown-item > a {
+  font-family: var(--primary-font-family);
+  font-weight: 700;
 }
 .dropdown:hover .dropdown-content {
   opacity: 1;

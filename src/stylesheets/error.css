@@ -2,10 +2,12 @@
   height: 100vh;
   margin: 25vh auto;
   font-size: 2rem;
+  font-family: var(--secondary-font-family);
 }
 .error-content > h2 {
   margin: 0px auto 12px;
   color: var(--secondary-font-color);
+  font-family: var(--primary-font-family);
 }
 .error-content > p {
   font-size: 1.85rem;

@@ -1,6 +1,7 @@
 section#contact {
   margin: 0px auto;
   height: 100vh;
+  font-family: var(--secondary-font-family);
 }
 .contact-content {
   display: grid;
@@ -40,14 +41,22 @@ section#contact {
   font-size: calc(var(--navbar-font-size) * 0.75);
   padding: 8px;
   border: 2px solid var(--secondary-font-color);
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+}
+.contact-form > form > .row > select,
+option {
+  font-family: var(--secondary-font-family);
 }
 .contact-form > form > .row > textarea {
-  font-size: calc(var(--navbar-font-size) * 0.7);
+  font-size: calc(var(--navbar-font-size) * 0.8);
   resize: none;
   line-height: 1.5;
   padding: 0px 8px;
   border: 2px solid var(--secondary-font-color);
   width: 100%;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
 }
 .submit-btn {
   border: 2px solid var(--secondary-font-color);
@@ -56,6 +65,8 @@ section#contact {
   padding: 4px 24px;
   font-size: 1.35rem;
   cursor: pointer;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
 }
 
 .right {
@@ -76,6 +87,8 @@ section#contact {
   padding-top: 8px;
   font-size: 1.15rem;
   text-align: left;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
 }
 .right > div > div > p {
   color: var(--primary-font-color);

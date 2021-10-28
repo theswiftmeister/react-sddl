@@ -74,6 +74,7 @@ const Project = () => {
       localArea: newProject.localArea,
       status: newProject.status,
       downloads: newProject.downloads,
+      handoverDate: newProject.handoverDate,
     });
   }, [projectname]);
 
@@ -126,6 +127,12 @@ const Project = () => {
                 <h4>Status: </h4>
                 <p>{project.status}</p>
               </div>
+              {project.status === "In Development" && (
+                <div>
+                  <h4>Expected handover date: </h4>
+                  <p>{project.handoverDate}</p>
+                </div>
+              )}
             </div>
             <div className="project-images">
               <PerspectiveImages
@@ -221,15 +228,14 @@ const DownloadLinks = ({ public_url, project }) => {
       <a key={idx} href={`/${public_url}${path}`} download>
         <span
           style={{
-            fontWeight: "700",
-            padding: "0 0.2rem",
+            padding: "0 0.3rem",
             marginRight: "0.2rem",
             border: "1px solid black",
             borderRadius: "5px",
             backgroundColor: "#ededed",
           }}
         >
-          &#x2193;
+          ↓
         </span>
         {`${title[0].toUpperCase()}${title.substring(1)}-plan`}
       </a>

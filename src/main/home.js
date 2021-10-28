@@ -144,7 +144,10 @@ const Home = () => {
             alt=""
           />
           <h1 className="section-headings">Featured Projects</h1>
-          <span className="underline"></span>
+          <span
+            className="underline"
+            style={{ borderTop: "3px solid var(--primary-background-color)" }}
+          ></span>
           <div className="featured-cards-container">
             <Cards public_url={public_url} />
           </div>
@@ -218,7 +221,7 @@ const Cards = React.memo(({ public_url }) => {
       >
         <div className="image">
           <div className="card-details">
-            <h2 className="card-title">{name}</h2>
+            <h2 className="card-title">SDD {name}</h2>
             <p className="address">{localArea}</p>
           </div>
           <img

@@ -1,14 +1,15 @@
 [
   {
     "images": ["images/villa-blanc/card-image-1.jpg"],
-    "name": "Villa Blanc",
+    "name": "Villa Blance",
     "propertyType": "Residencial Building",
     "storied": "13 stories w/ two basements",
     "address": "House no. 543/N, Rd. 6/A",
     "localArea": "Dhanmondi R/A, Dhaka.",
     "status": "In Development",
     "downloads": [],
-    "size": ""
+    "size": "",
+    "handoverDate": "-/-/-"
   },
   {
     "images": [
@@ -29,7 +30,8 @@
       "download-plans/Baitul Khalek/floor.pdf",
       "download-plans/Baitul Khalek/roof.pdf"
     ],
-    "size": ""
+    "size": "",
+    "handoverDate": "-/-/-"
   },
   {
     "images": ["images/al amin/view_01.png"],
@@ -44,7 +46,8 @@
       "download-plans/Al Amin/floor.pdf",
       "download-plans/Al Amin/roof.pdf"
     ],
-    "size": "1352"
+    "size": "1352",
+    "handoverDate": ""
   },
   {
     "images": [],
@@ -59,7 +62,8 @@
       "download-plans/Aumio Regency/floor.pdf",
       "download-plans/Aumio Regency/roof.pdf"
     ],
-    "size": "1194"
+    "size": "1194",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -79,7 +83,8 @@
       "download-plans/Asia Tower/floor.pdf",
       "download-plans/Asia Tower/roof.pdf"
     ],
-    "size": "1231, 1322, 1256, 1231"
+    "size": "1231, 1322, 1256, 1231",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -98,7 +103,8 @@
       "download-plans/Bihanga/floor.pdf",
       "download-plans/Bihanga/roof.pdf"
     ],
-    "size": ""
+    "size": "",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -116,7 +122,8 @@
       "download-plans/Feroza Garden/floor.pdf",
       "download-plans/Feroza Garden/roof.pdf"
     ],
-    "size": "896, 932, 860"
+    "size": "896, 932, 860",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -136,7 +143,8 @@
       "download-plans/Hamida Tower/floor.pdf",
       "download-plans/Hamida Tower/roof.pdf"
     ],
-    "size": ""
+    "size": "",
+    "handoverDate": ""
   },
   {
     "images": ["images/Khair Palace/01.jpg", "images/Khair Palace/03.jpg"],
@@ -151,7 +159,8 @@
       "download-plans/Khair Palace/floor.pdf",
       "download-plans/Khair Palace/roof.pdf"
     ],
-    "size": "1085, 1185"
+    "size": "1085, 1185",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -170,7 +179,8 @@
       "download-plans/Maleha Mahal/floor.pdf",
       "download-plans/Maleha Mahal/roof.pdf"
     ],
-    "size": "1585"
+    "size": "1585",
+    "handoverDate": ""
   },
   {
     "images": [],
@@ -185,7 +195,8 @@
       "download-plans/Mahmuda Villa/floor.pdf",
       "download-plans/Mahmuda Villa/roof.pdf"
     ],
-    "size": "1505"
+    "size": "1505",
+    "handoverDate": ""
   },
   {
     "images": ["images/Mirza Regency/01.jpg", "images/Mirza Regency/02.jpg"],
@@ -195,7 +206,8 @@
     "localArea": "Dhaka",
     "status": "Completed",
     "downloads": [],
-    "size": ""
+    "size": "",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -214,7 +226,8 @@
       "download-plans/Parents Dream/floor.pdf",
       "download-plans/Parents Dream/roof.pdf"
     ],
-    "size": ""
+    "size": "",
+    "handoverDate": ""
   },
   {
     "images": ["images/probash/1.jpg", "images/probash/2.jpg"],
@@ -229,7 +242,8 @@
       "download-plans/Probash/floor.pdf",
       "download-plans/Probash/roof.pdf"
     ],
-    "size": "1175, 1195"
+    "size": "1175, 1195",
+    "handoverDate": ""
   },
   {
     "images": ["images/ROSE GARDEN/1.jpg", "images/ROSE GARDEN/3.jpg"],
@@ -240,7 +254,8 @@
     "localArea": "Tejgaon,Dhaka",
     "status": "Completed",
     "downloads": [],
-    "size": "1305, 1183"
+    "size": "1305, 1183",
+    "handoverDate": ""
   },
   {
     "images": ["images/Sanchita/1.jpg", "images/Sanchita/2.jpg"],
@@ -256,7 +271,8 @@
       "download-plans/Sanchita/floor.pdf",
       "download-plans/Sanchita/roof.pdf"
     ],
-    "size": "1451, 1546"
+    "size": "1451, 1546",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -276,7 +292,8 @@
       "download-plans/Sayeeda Lodge/floor.pdf",
       "download-plans/Sayeeda Lodge/roof.pdf"
     ],
-    "size": "1600"
+    "size": "1600",
+    "handoverDate": ""
   },
   {
     "images": [
@@ -297,7 +314,8 @@
       "download-plans/Sharolipi and Shiralipi/floor.pdf",
       "download-plans/Sharolipi and Shiralipi/roof.pdf"
     ],
-    "size": "1533"
+    "size": "1533",
+    "handoverDate": ""
   },
   {
     "images": ["images/soangoan/1.jpg", "images/soangoan/2.jpg"],
@@ -312,6 +330,7 @@
       "download-plans/Soangoan/floor.pdf",
       "download-plans/Soangoan/roof.pdf"
     ],
-    "size": ""
+    "size": "",
+    "handoverDate": ""
   }
 ]

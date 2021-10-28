@@ -1,5 +1,7 @@
 .project-container {
   height: 90vh;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
 }
 .bread-crumb {
   display: flex;
@@ -62,6 +64,8 @@ ul.breadcrumb li a:hover {
 }
 .project-info > div > h4 {
   text-align: left;
+  font-family: var(--secondary-font-family);
+  font-weight: 500;
 }
 
 .project-images {
@@ -108,6 +112,10 @@ ul.breadcrumb li a:hover {
   margin-left: 3px;
   text-decoration: none;
   color: var(--primary-font-color);
+}
+.download-project-plan > a > span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
 }
 .download-project-plan > a:hover {
   font-weight: bolder;
