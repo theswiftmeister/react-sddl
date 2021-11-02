@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import projects_data from "../jsondata/projects_data.json";
 import "../stylesheets/project.css";
 
@@ -18,8 +19,13 @@ const Project = () => {
   const public_url = process.env.PUBLIC_URL;
   const [project, setProject] = useState(projects_data[0]);
   const page = location.state["page"];
+  const [closeImg, setCloseImg] = useState(true);
   const { projectname } = useParams();
   let isZoommed = false;
+
+  const isMin1368 = useMediaQuery({
+    query: "(min-width: 1368px)",
+  });
 
   const onMouseOver = (e) => {
     ref.current.setAttribute("src", `/${public_url}${e.target.alt}`);
@@ -59,6 +65,11 @@ const Project = () => {
     }
   };
 
+  const onTouchOpenImg = (e) => {
+    ref.current.setAttribute("src", `/${public_url}${e.target.alt}`);
+    setCloseImg(false);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const newProject = projects_data.find(
@@ -75,7 +86,9 @@ const Project = () => {
       status: newProject.status,
       downloads: newProject.downloads,
       handoverDate: newProject.handoverDate,
+      completedYear: newProject.completedYear,
     });
+    console.log("callback");
   }, [projectname]);
 
   return (
@@ -127,10 +140,15 @@ const Project = () => {
                 <h4>Status: </h4>
                 <p>{project.status}</p>
               </div>
-              {project.status === "In Development" && (
+              {project.status === "In Development" ? (
                 <div>
                   <h4>Expected handover date: </h4>
                   <p>{project.handoverDate}</p>
+                </div>
+              ) : (
+                <div>
+                  <h4>Completion year:</h4>
+                  <p>{project.completedYear}</p>
                 </div>
               )}
             </div>
@@ -142,6 +160,7 @@ const Project = () => {
                 onMouseLeave={onMouseLeave}
                 onMouseWheel={onMouseWheel}
                 onMouseMove={onMouseMove}
+                setCloseImg={onTouchOpenImg}
               />
             </div>
             <div className="download-project-plan">
@@ -152,27 +171,70 @@ const Project = () => {
               )}
             </div>
           </div>
-          <div className="center-border"></div>
-          <div
-            className="image-div"
-            style={{
-              overflow: "hidden",
-              margin: "16px",
-              borderRadius: "6px",
-              boxShadow: "10px 10px 15px 0px rgba(0, 0, 0, 0.5)",
-            }}
-          >
-            <img
-              src=""
-              alt=""
-              ref={ref}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
+          {isMin1368 ? (
+            <>
+              <div className="center-border"></div>
+              <div
+                className="image-div"
+                style={{
+                  overflow: "hidden",
+                  margin: "16px",
+                  borderRadius: "6px",
+                  boxShadow: "10px 10px 15px 0px rgba(0, 0, 0, 0.5)",
+                }}
+              >
+                <img
+                  src=""
+                  alt=""
+                  ref={ref}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            </>
+          ) : (
+            <div className={`full-width-img ${!closeImg && "show-img"}`}>
+              <div
+                style={{
+                  width: "100%",
+                  height: "50px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    margin: "0.5rem 0.5rem auto auto",
+                    border: "1px solid white",
+                    borderRadius: "4px",
+                    color: "var(--primary-font-color)",
+                    backgroundColor: "var(--primary-background-color)",
+                    fontSize: "1.4rem",
+                  }}
+                  onClick={() => {
+                    setCloseImg(true);
+                  }}
+                >
+                  X
+                </div>
+              </div>
+              <div className="full-width-img-div">
+                <img
+                  src=""
+                  alt=""
+                  ref={ref}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
@@ -186,6 +248,7 @@ const PerspectiveImages = ({
   onMouseLeave,
   onMouseWheel,
   onMouseMove,
+  setCloseImg,
 }) => {
   const { images } = project;
   return images.map((path, id) => {
@@ -205,6 +268,9 @@ const PerspectiveImages = ({
           }}
           onMouseMove={(e) => {
             onMouseMove(e);
+          }}
+          onTouchStart={(e) => {
+            setCloseImg(e);
           }}
         />
       </div>

@@ -41,16 +41,20 @@ const Contact = () => {
                   <div
                     className="row"
                     style={{
-                      display: "grid",
-                      gridTemplateColumns: "0.55fr 0.7fr 0.7fr",
+                      display: "flex",
+                      justifyContent: "center",
                     }}
                   >
-                    <label htmlFor="appointmentType">Appointment For :</label>
+                    <label
+                      htmlFor="appointmentType"
+                      style={{ paddingRight: "0.5rem" }}
+                    >
+                      Appointment For :
+                    </label>
                     <select
                       name="appointmentType"
                       id="appointmentType"
                       style={{
-                        fontSize: "1.15rem",
                         border: "2px solid black",
                       }}
                       onChange={(e) => {

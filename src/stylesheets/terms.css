@@ -20,6 +20,9 @@ h1 {
   font-weight: bold;
   color: var(--navbar-font-color);
   font-family: var(--secondary-font-family);
+  width: 50vw;
+  margin: 0px auto;
+  font-size: 1.1rem;
 }
 .terms-list-item > p.term-text {
   font-weight: 400;
@@ -27,8 +30,41 @@ h1 {
   padding: 0px 16px 16px;
   line-height: 1.5;
   font-family: var(--secondary-font-family);
+  width: 50vw;
+  margin: 0px auto;
 }
 
 .coloured {
   background-color: var(--primary-background-color);
+}
+/* Responsive CSS, while screen less than equal to 1368*/
+@media (max-width: 1368px) {
+  .terms-list-item > p.numbers {
+    width: 80vw;
+    font-size: 1.1rem;
+  }
+  .terms-list-item > p.term-text {
+    width: 80vw;
+    font-size: 1.1rem;
+  }
+}
+/* Responsive CSS, while screen less than equal to 1050*/
+@media (max-width: 1024px) {
+  .terms-list-item > p.numbers {
+    width: 98vw;
+    font-size: 1rem;
+  }
+  .terms-list-item > p.term-text {
+    width: 98vw;
+    font-size: 1rem;
+  }
+}
+/* Responsive CSS, while screen less than equal to 768*/
+@media (max-width: 600px) {
+  .terms-list-item > p.numbers {
+    font-size: 0.8rem;
+  }
+  .terms-list-item > p.term-text {
+    font-size: 0.8rem;
+  }
 }

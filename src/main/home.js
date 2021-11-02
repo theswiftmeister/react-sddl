@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { isBrowser, isMobile } from "react-device-detect";
 import carousel_data from "../jsondata/carousel-data.json";
 import cards_data from "../jsondata/projects_data.json";
 import "../stylesheets/carousel.css";
@@ -79,61 +80,64 @@ const Home = () => {
           />
           <h1 className="section-headings">About Us</h1>
           <span className="underline"></span>
-          <div className="first-row">
-            <div className="about-us-img">
-              <img src={`${public_url}/images/about-1-img.jpg`} alt="" />
+          <div className="row-container">
+            <div className="first-row">
+              <div className="about-us-img">
+                <img src={`${public_url}/images/about-1-img.jpg`} alt="" />
+              </div>
+              <div className="about-us-text">
+                <h3>Who are we?</h3>
+                <div
+                  className="underline"
+                  style={{ width: "10%", margin: "0px auto" }}
+                ></div>
+                <p>
+                  Space Design & Development (Pvt) Ltd. is a real estate company
+                  that practices the guidelines of architecture and design set
+                  by the Bangladesh University of Engineering Technology. We are
+                  a group of professionals who feel comfortable in slow and
+                  steady proceedings towards a particular goal.
+                </p>
+              </div>
             </div>
-            <div className="about-us-text">
-              <h3>Who are we?</h3>
-              <div
-                className="underline"
-                style={{ width: "10%", margin: "0px auto" }}
-              ></div>
-              <p>
-                Space Design & Development (Pvt) Ltd. is a real estate company
-                that practices the guidelines of architecture and design set by
-                the Bangladesh University of Engineering Technology. We are a
-                group of professionals who feel comfortable in slow and steady
-                proceedings towards a particular goal.
-              </p>
+            <div className="second-row">
+              <div className="about-us-text">
+                <h3>What are our strengths?</h3>
+                <div
+                  className="underline"
+                  style={{ width: "10%", margin: "0px auto" }}
+                ></div>
+                <p>
+                  We have experienced architects, engineers and administrative
+                  staffs capable of designing remarkable interior and exterior
+                  projects with utmost quality. We are able to construct
+                  moderate size building as well as producing every types of
+                  furnitures. We are primarily an architectural association that
+                  is supported by a group of experienced execution teams and
+                  manufacturing teams.
+                </p>
+              </div>
+              <div className="about-us-img">
+                <img src={`${public_url}/images/about-2-img.jpg`} alt="" />
+              </div>
             </div>
-          </div>
-          <div className="second-row">
-            <div className="about-us-text">
-              <h3>What are our strengths?</h3>
-              <div
-                className="underline"
-                style={{ width: "10%", margin: "0px auto" }}
-              ></div>
-              <p>
-                We have experienced architects, engineers and administrative
-                staffs capable of designing remarkable interior and exterior
-                projects with utmost quality. We are able to construct moderate
-                size building as well as producing every types of furnitures. We
-                are primarily an architectural association that is supported by
-                a group of experienced execution teams and manufacturing teams.
-              </p>
-            </div>
-            <div className="about-us-img">
-              <img src={`${public_url}/images/about-2-img.jpg`} alt="" />
-            </div>
-          </div>
-          <div className="third-row">
-            <div className="about-us-img">
-              <img src={`${public_url}/images/about-3-img.jpg`} alt="" />
-            </div>
-            <div className="about-us-text">
-              <h3>What are our goals?</h3>
-              <div
-                className="underline"
-                style={{ width: "10%", margin: "0px auto" }}
-              ></div>
-              <p>
-                We aim to satisfy our customers with our product and promises,
-                and provide them with paramount priority and quality. We value
-                our customers time and always focus on delivering within
-                deadlines.
-              </p>
+            <div className="third-row">
+              <div className="about-us-img">
+                <img src={`${public_url}/images/about-3-img.jpg`} alt="" />
+              </div>
+              <div className="about-us-text">
+                <h3>What are our goals?</h3>
+                <div
+                  className="underline"
+                  style={{ width: "10%", margin: "0px auto" }}
+                ></div>
+                <p>
+                  We aim to satisfy our customers with our product and promises,
+                  and provide them with paramount priority and quality. We value
+                  our customers time and always focus on delivering within
+                  deadlines.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -196,9 +200,6 @@ const CarouselItem = ({ items, public_url, index }) => {
               <p
                 key={id}
                 className="info-text"
-                style={
-                  id === 0 ? { fontSize: "1.25rem" } : { fontSize: "1.35rem" }
-                }
                 dangerouslySetInnerHTML={{ __html: txt }}
               ></p>
             ))}

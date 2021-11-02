@@ -19,3 +19,17 @@
   font-size: 1.2rem;
   color: var(--secondary-font-color);
 }
+
+/* Responsive CSS, while screen less than equal to 550*/
+@media (max-width: 550px) {
+  .error-content {
+    font-size: 1.5rem;
+  }
+  .error-content > p {
+    font-size: 1.35rem;
+  }
+
+  .error-content > a {
+    font-size: 1rem;
+  }
+}

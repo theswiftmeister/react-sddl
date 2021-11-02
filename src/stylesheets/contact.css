@@ -1,6 +1,5 @@
 section#contact {
   margin: 0px auto;
-  height: 100vh;
   font-family: var(--secondary-font-family);
 }
 .contact-content {
@@ -47,6 +46,7 @@ section#contact {
 .contact-form > form > .row > select,
 option {
   font-family: var(--secondary-font-family);
+  font-size: 1rem;
 }
 .contact-form > form > .row > textarea {
   font-size: calc(var(--navbar-font-size) * 0.8);
@@ -70,9 +70,6 @@ option {
 }
 
 .right {
-  display: grid;
-  grid-template-columns: 1fr;
-  height: 50%;
   margin: 16px auto auto;
   padding: 16px;
 }
@@ -83,7 +80,7 @@ option {
   margin-bottom: 8px;
 }
 .right > div > p {
-  margin-left: 26px;
+  margin-left: 2rem;
   padding-top: 8px;
   font-size: 1.15rem;
   text-align: left;
@@ -115,4 +112,103 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* Responsive CSS, while screen less than equal to 1368*/
+@media (max-width: 1368px) {
+}
+/* Responsive CSS, while screen less than equal to 1024*/
+@media (max-width: 1024px) {
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .book-appointment {
+    margin: 0px auto;
+    width: 50vw;
+  }
+  .right {
+    margin: 0.5rem auto auto;
+  }
+  .right > div > p {
+    font-size: 1.5rem;
+  }
+  .right > div > div > p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive CSS, while screen less than equal to 768*/
+@media (max-width: 768px) {
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .book-appointment {
+    margin: 0px auto;
+    width: 75vw;
+  }
+  .right > div > p {
+    font-size: 1.2rem;
+  }
+  .right > div > div > p {
+    font-size: 1.2rem;
+  }
+}
+/* Responsive CSS, while screen less than equal to 550*/
+@media (max-width: 550px) {
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .book-appointment {
+    margin: 0px auto;
+    width: 100vw;
+  }
+  .book-appointment > p {
+    font-size: calc(var(--navbar-font-size) * 0.6);
+  }
+  .contact-form {
+    margin: auto;
+  }
+  .contact-form > form {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .contact-form > form > .row {
+    text-align: left;
+    margin: auto;
+    padding: 8px 0px;
+  }
+
+  .contact-form > form > .row > label {
+    display: block;
+    font-size: calc(var(--navbar-font-size) * 0.6);
+    color: var(--primary-font-color);
+  }
+  .contact-form > form > .row > input {
+    font-size: calc(var(--navbar-font-size) * 0.5);
+    padding: 8px;
+  }
+  .contact-form > form > .row > select,
+  option {
+    font-family: var(--secondary-font-family);
+    font-size: 0.6rem;
+  }
+  .contact-form > form > .row > textarea {
+    font-size: calc(var(--navbar-font-size) * 0.65);
+    resize: none;
+    line-height: 1.5;
+    padding: 0px 6px;
+  }
+  .submit-btn {
+    padding: 4px 24px;
+    font-size: 0.85rem;
+  }
+  .right > div > p {
+    font-size: 1rem;
+  }
+  .right > div > div > p {
+    font-size: 1rem;
+  }
 }

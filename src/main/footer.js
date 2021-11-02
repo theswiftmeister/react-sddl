@@ -18,13 +18,11 @@ export default function Footer() {
         <footer>
           <div className="container">
             <div className="footer-top">
-              <div>
-                <img
-                  className="footer-logo"
-                  src={`${process.env.PUBLIC_URL}/images/full-logo.png`}
-                  alt=""
-                />
-              </div>
+              <img
+                className="footer-logo"
+                src={`${process.env.PUBLIC_URL}/images/full-logo.png`}
+                alt=""
+              />
               <div className="footer-item">
                 <Link className="footer-link" to={"/Contact_Us"}>
                   Book an Appointment
@@ -36,10 +34,7 @@ export default function Footer() {
                   Legal Terms & Conditions
                 </Link>
               </div>
-              <div
-                className="footer-address"
-                style={{ borderLeft: "1px solid grey" }}
-              >
+              <div className="footer-address">
                 <p>Phone: +88-01740573192, 02-9641386</p>
                 <p>Address: Level-2, Chandrashila Tower.</p>
                 <p>69/1 Panthapath Road, Dhaka, Bangladesh.</p>

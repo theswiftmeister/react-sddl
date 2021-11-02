@@ -8,6 +8,7 @@ header {
 }
 
 .navbar {
+  position: relative;
   width: 85vw;
   height: 100%;
   padding: 4px;
@@ -17,9 +18,6 @@ header {
   font-family: var(--primary-font-family);
   font-size: calc(var(--navbar-font-size));
   font-weight: 700;
-}
-.navbar-left {
-  height: 79px;
 }
 .navlist {
   list-style: none;
@@ -86,4 +84,135 @@ header {
 }
 .dropdown-item:hover > .nav-link {
   color: var(--primary-background-color);
+}
+.navbar-right {
+  padding-right: 0.5rem;
+}
+.collapse {
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  width: 100vw;
+  padding: 0rem 0rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.719);
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.collapse-show {
+  top: 100%;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1;
+}
+.collapse-toggler {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 40px;
+  padding: 1px 2px;
+}
+
+.collapse-toggler > div {
+  border: 1px solid black;
+  margin: 0.2rem 0px;
+}
+
+/* Responsive CSS, while screen less than equal to 1368*/
+@media (max-width: 1368px) {
+  .navbar {
+    width: 100vw;
+    align-items: center;
+  }
+  .navbar-img {
+    padding-left: 0.5rem;
+  }
+}
+/* Responsive CSS, while screen less than equal to 1024*/
+@media (max-width: 1024px) {
+}
+
+/* Responsive CSS, while screen less than equal to 768*/
+@media (max-width: 768px) {
+  .nav-item {
+    padding: 0.5rem 0rem;
+    position: static;
+    text-align: right;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: var(--primary-background-color);
+    transition: all 0.3s;
+  }
+  .current-page {
+    font-size: calc(var(--navbar-font-size) * 1.5);
+    padding-bottom: 0.25rem;
+    border-bottom: none;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+  }
+  .not-current-page {
+    font-size: calc(var(--navbar-font-size) * 1.2);
+  }
+  .not-current-page:hover {
+    font-size: calc(var(--navbar-font-size) * 1.2);
+  }
+
+  .dropdown-content {
+    white-space: normal;
+    background-color: transparent;
+    box-shadow: none;
+    position: static;
+    opacity: 1;
+    z-index: 1;
+    transition: none;
+    pointer-events: all;
+  }
+  .dropdown-item {
+    font-size: calc(var(--navbar-font-size) * 1);
+    position: static;
+    transition: none;
+    padding: 0.5rem 1rem 0rem;
+  }
+  .dropdown-item > a {
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+  }
+  .dropdown-item:hover {
+    background-color: transparent;
+    cursor: none;
+  }
+  .dropdown-item:hover > .nav-link {
+    background-color: transparent;
+  }
+}
+/* Responsive CSS, while screen less than equal to 550*/
+@media (max-width: 550px) {
+  .navbar-img {
+    height: 40px;
+  }
+  .collapse-toggler {
+    width: 30px;
+  }
+  .nav-item {
+    padding: 0.25rem 0rem;
+  }
+
+  .current-page {
+    font-size: calc(var(--navbar-font-size) * 0 8);
+    padding-bottom: 0.5rem;
+  }
+  .not-current-page {
+    font-size: calc(var(--navbar-font-size) * 0.7);
+  }
+  .not-current-page:hover {
+    font-size: calc(var(--navbar-font-size) * 0.7);
+  }
+  .dropdown-item {
+    font-size: calc(var(--navbar-font-size) * 0.6);
+    padding: 0.5rem 0rem 0rem;
+  }
 }

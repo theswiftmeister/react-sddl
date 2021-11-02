@@ -1,14 +1,19 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useRef } from "react/cjs/react.development";
+import { useMediaQuery } from "react-responsive";
 import projects_data from "../jsondata/projects_data.json";
 import "../stylesheets/projects.css";
-
-const maxItemsPerPage = 5;
 
 const Projects = () => {
   const location = useLocation();
   const public_url = process.env.PUBLIC_URL;
+
+  const isMin1024 = useMediaQuery({
+    query: "(min-width: 1024px)",
+  });
+
+  const maxItemsPerPage = isMin1024 ? 7 : 5;
+
   const [projectList, setProjectList] = useState(projects_data);
   const inputNameRef = useRef(null);
   const inputAreaRef = useRef(null);
@@ -91,21 +96,18 @@ const Projects = () => {
                 id="search-input-area"
                 ref={inputAreaRef}
               />
-              <label htmlFor="search-input-status">Select status: </label>
-              <select
-                name="select-status"
-                id="select-status"
-                ref={inputStatusRef}
-                style={{
-                  fontSize: "1.15rem",
-                  padding: "2px",
-                  border: "2px solid black",
-                }}
-              >
-                <option value="any">All</option>
-                <option value="completed">Completed</option>
-                <option value="in development">In Development</option>
-              </select>
+              <div className="select">
+                <label htmlFor="search-input-status">Select status: </label>
+                <select
+                  name="select-status"
+                  id="select-status"
+                  ref={inputStatusRef}
+                >
+                  <option value="any">All</option>
+                  <option value="completed">Completed</option>
+                  <option value="in development">In Development</option>
+                </select>
+              </div>
 
               <button className="form-submit" type="submit">
                 Search
@@ -125,6 +127,7 @@ const Projects = () => {
                   project_list={projectList}
                   public_url={public_url}
                   page={page}
+                  maxItemsPerPage={maxItemsPerPage}
                 />
               ) : (
                 <li className="project-list-item">
@@ -145,6 +148,7 @@ const Projects = () => {
               project_list={projectList}
               page={page}
               setPage={(e) => changePage(e)}
+              maxItemsPerPage={maxItemsPerPage}
             />
           </div>
         </div>
@@ -153,7 +157,7 @@ const Projects = () => {
   );
 };
 
-const ListItem = ({ project_list, public_url, page }) => {
+const ListItem = ({ project_list, public_url, maxItemsPerPage, page }) => {
   console.log("df");
   return project_list
     .slice(
@@ -179,10 +183,6 @@ const ListItem = ({ project_list, public_url, page }) => {
             <Link
               className="item-title"
               to={{ pathname: `/project/${name}`, state: { page: page } }}
-              style={{
-                marginLeft: "0px",
-                fontSize: `${name.length > 13 ? "1.25rem" : "1.35rem"}`,
-              }}
             >
               SDD {name}
             </Link>
@@ -194,7 +194,7 @@ const ListItem = ({ project_list, public_url, page }) => {
     });
 };
 
-const Pagination = ({ project_list, page, setPage }) => {
+const Pagination = ({ project_list, maxItemsPerPage, page, setPage }) => {
   const arr_size = parseInt(
     project_list.length % maxItemsPerPage === 0
       ? project_list.length / maxItemsPerPage

@@ -163,7 +163,6 @@
 } */
 .carousel-slider-dots {
   width: 100%;
-  /* height: 2vh; */
   position: absolute;
   bottom: 1%;
   display: flex;
@@ -183,4 +182,106 @@
 }
 .slider-dot-active {
   background-color: var(--secondary-background-color);
+}
+
+/* Responsive CSS, while screen less than equal to 1368*/
+@media (max-width: 1368px) {
+  .item-title-text {
+    font-size: 2.5rem;
+  }
+  .info-text {
+    font-size: 1.15rem;
+  }
+  .slider-btm-arrows {
+    bottom: 10px;
+  }
+  .arrows {
+    margin: 0px 2%;
+  }
+}
+/* Responsive CSS, while screen less than equal to 1024*/
+@media (max-width: 1024px) {
+  .title-info-text {
+    width: 45%;
+    height: 25%;
+  }
+  .slider-dot {
+    margin: 0 4px;
+    padding: 3px 20px;
+  }
+}
+/* Responsive CSS, while screen less than equal to 768*/
+@media (max-width: 768px) {
+  .item-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-50%);
+    object-position: center;
+  }
+  .title-info-text {
+    width: 60%;
+    height: 25%;
+  }
+  .title-slide-in {
+    transform: translateX(20%);
+    opacity: 1;
+  }
+  .title-slide-out {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  .slider-dot {
+    margin: 0 2.5px;
+    padding: 2px 10px;
+  }
+}
+/* Responsive CSS, while screen less than equal to 550*/
+@media (max-width: 550px) {
+  .carousel {
+    height: 40vh;
+  }
+  .carousel-container {
+    margin: 0px auto;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+  }
+  .item-image {
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+  }
+  .item-title-text {
+    margin: 0.2rem auto;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+  }
+  .item-info-text {
+    bottom: 0%;
+    margin: 0.1rem auto;
+    padding-right: 1.5rem;
+    line-height: 0;
+  }
+  .info-text {
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+  }
+  .title-info-text {
+    width: 60%;
+    height: 30%;
+  }
+  .title-slide-in {
+    transform: translateX(20%);
+    opacity: 1;
+  }
+  .title-slide-out {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  .slider-btm-arrows,
+  .carousel-bottom {
+    display: none;
+  }
 }

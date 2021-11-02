@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { useMediaQuery } from "react-responsive";
 import navbar_data from "../jsondata/navbar-data.json";
 
 import "../stylesheets/header.css";
@@ -14,35 +15,49 @@ export default function Navbar() {
   };
 
   const [showHeader, setShowHeader] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const mediaQ = useMediaQuery({
+    query: "(min-width: 769px)",
+  });
+
+  const handleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
   useEffect(() => {
     window.scroll({ top: 0, behavior: "smooth" });
     if (header_pages.includes(pathname) | /[/project/]./.test(pathname))
       setShowHeader(true);
     else setShowHeader(false);
   }, [pathname]);
+
   return (
     <>
       {showHeader && (
         <header>
           <div className="container">
             <nav className="navbar">
-              <div className="navbar-left">
-                <Link
-                  to="/home"
-                  onClick={() => {
-                    window.scroll({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/sddl-logo.png`}
-                    alt=""
-                  />
-                </Link>
-              </div>
+              <img
+                className="navbar-img"
+                src={`${process.env.PUBLIC_URL}/images/sddl-logo.png`}
+                alt=""
+                onClick={() => {
+                  window.scroll({ top: 0, behavior: "smooth" });
+                }}
+              />
               <div className="navbar-right">
-                <ul className="navlist">
-                  <NavLinks items={navbar_data} pathname={getPathName()} />
-                </ul>
+                {mediaQ ? (
+                  <ul className="navlist">
+                    <NavLinks items={navbar_data} pathname={getPathName()} />
+                  </ul>
+                ) : (
+                  <NavbarToggler
+                    isCollapsed={isCollapsed}
+                    handleCollapse={handleCollapse}
+                    items={navbar_data}
+                    pathname={getPathName()}
+                  />
+                )}
               </div>
             </nav>
           </div>
@@ -52,7 +67,7 @@ export default function Navbar() {
   );
 }
 
-const NavLinks = ({ items, pathname, ref }) => {
+const NavLinks = ({ items, pathname }) => {
   return items.map((item) => {
     const { id, heading, url, dropdowns } = item;
     return (
@@ -81,6 +96,30 @@ const NavLinks = ({ items, pathname, ref }) => {
       </li>
     );
   });
+};
+
+const NavbarToggler = ({ isCollapsed, handleCollapse, items, pathname }) => {
+  return (
+    <>
+      <div
+        className="collapse-toggler"
+        onClick={() => {
+          handleCollapse();
+        }}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      {isCollapsed && (
+        <div className={`collapse ${isCollapsed && "collapse-show"}`}>
+          <ul>
+            <NavLinks items={items} pathname={pathname} />
+          </ul>
+        </div>
+      )}
+    </>
+  );
 };
 
 const DropDownLinks = ({ dropdown }) => {
